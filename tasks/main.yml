@@ -1,0 +1,13 @@
+---
+- name: Install LibreOffice via Mac App Store
+  command: mas install "{{ item.id }}"
+  args:
+    creates: /Applications/{{ item.name }}.app
+  with_items:
+    - { id: 921923693, name: "LibreOffice Vanilla" }
+  when: ansible_os_family == "Darwin" and prefer_mas_over_homebrew == true
+
+- name: Install LibreOffice via Homebrew
+  homebrew_cask:
+    name: libreoffice
+  when: ansible_os_family == "Darwin" and prefer_mas_over_homebrew == false
