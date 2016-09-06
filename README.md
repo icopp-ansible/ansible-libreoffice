@@ -1,6 +1,6 @@
-# ansible-1password
+# ansible-libreoffice
 
-Install LibreOffice via the Mac App Store or Homebrew. Does nothing on non-macOS platforms.
+Install LibreOffice via the Mac App Store or Homebrew.
 
 Note that if installed via the Mac App Store, the app name is "LibreOffice Vanilla". This is near-identical to the Homebrew distribution, except for a popup directing first-time users to the LibreOffice website.
 
@@ -10,8 +10,8 @@ Note that if installed via the Mac App Store, the app name is "LibreOffice Vanil
 
 ## Dependencies
 
-* [icopp.mas-cli](https://github.com/icopp/ansible-mas-cli) (included as repository dependency), but only if `prefer_mas_over_homebrew` is `true`.
-* [icopp.homebrew-cask](https://github.com/icopp/ansible-homebrew-cask) (included as repository dependency), but only if `prefer_mas_over_homebrew` is `false`.
+* [icopp.mas-cli](https://github.com/icopp/ansible-mas-cli), but only if `prefer_mas_over_homebrew` is `true`.
+* [icopp.homebrew-cask](https://github.com/icopp/ansible-homebrew-cask), but only if `prefer_mas_over_homebrew` is `false`.
 
 ## Example Playbook
 
